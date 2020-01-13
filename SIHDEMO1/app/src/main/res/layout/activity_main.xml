@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/button00"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHOOSE FILE" />
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_below="@+id/button00"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/uploadimage" />
+
+
+<EditText
+    android:id="@+id/username"
+    android:layout_below="@+id/image1"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_marginTop="40dp"
+    android:hint="USERNAME"/>
+    <EditText
+        android:layout_below="@+id/username"
+        android:id="@+id/complaint"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:hint="Complaint"/>
+    <EditText
+        android:id="@+id/location"
+        android:layout_below="@+id/complaint"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:hint="Location"/>
+
+    <Button
+        android:id="@+id/button0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/location"
+        android:layout_marginTop="20dp"
+        android:text="UPLOAD" />
+</RelativeLayout>
