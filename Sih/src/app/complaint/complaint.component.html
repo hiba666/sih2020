@@ -1,0 +1,34 @@
+
+
+<div class="container">
+       
+    <table class="table table-trapped">
+        <thead>
+            <tr><th>Image</th>
+                <th>Username</th>
+                <th>Complaint</th>
+                <th>Location</th>
+                <th>View Image</th>
+                <th>Status</th>
+                <th>Accept</th>
+                <th>Reject</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of customers">
+               <td><img class="rounded-circle"src="{{data.imageurl}}" width="180px" height="200px"  ></td>
+                <td>{{data.location}}</td>
+                <td>{{data.username}}</td>
+                <td>{{data.complaint}}</td>
+
+                <td><button class="btn btn-primary" (click)="getUser(data.imageurl,data.location)">View Image</button></td>
+                <td>{{data.status}}</td>
+                <td><button class="btn btn-success"*ngIf='data.status' (click)="updatu(data.key)">Accept</button></td>
+                <td><button class="btn btn-danger" (click)="deleteu(data.key,data.imageurl)">Reject</button></td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>
+
+
